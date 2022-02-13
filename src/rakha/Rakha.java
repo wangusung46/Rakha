@@ -3,7 +3,7 @@ package rakha;
 import rakha.controller.ControllerLogin;
 import rakha.view.menu.FormLogin;
 
-public class YosOOP {
+public class Rakha {
 
     /**
      * @param args the command line arguments
