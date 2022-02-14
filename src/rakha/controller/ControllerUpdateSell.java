@@ -18,7 +18,7 @@ import rakha.view.transaction.FormUpdateSell;
 
 /**
  *
- * @author Khanza
+ * @author Rakha
  */
 class ControllerUpdateSell {
 
@@ -139,17 +139,6 @@ class ControllerUpdateSell {
             defaultTableModelSell.addRow(objects);
         }
         clickTable = false;
-    }
-
-    private void performSave(FormUpdateSell formUpdateSell, DefaultTableModel defaultTableModelSell) {
-        Sell sell = new Sell();
-        sell.setId(0L);
-        sell.setIdBuy(((ComboItems) formUpdateSell.getjComboBoxName().getSelectedItem()).getKey());
-        sell.setSellAmount(Integer.parseInt(formUpdateSell.getjTextFieldTotalSell().getText()));
-        sell.setCash(new BigDecimal(formUpdateSell.getjTextFieldTotal().getText()));
-        sellJdbc.insertSell(sell);
-        loadTableSell(defaultTableModelSell);
-        JOptionPane.showMessageDialog(null, "Berhasil menyimpan data", "Success", JOptionPane.INFORMATION_MESSAGE);
     }
 
     private void performUpdate(FormUpdateSell formUpdateSell, DefaultTableModel defaultTableModel) {

@@ -7,7 +7,7 @@ import javax.swing.JTextField;
 
 /*
  *
- * @author Khanza
+ * @author Rakha
  */
 public class FormLogin extends javax.swing.JFrame {
 

@@ -2,7 +2,7 @@ package rakha.model.admin;
 
 /**
  *
- * @author Khanza
+ * @author Rakha
  */
 public class User {
 

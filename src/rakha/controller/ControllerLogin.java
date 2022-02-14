@@ -8,7 +8,7 @@ import rakha.view.menu.FormMenu;
 
 /**
  *
- * @author Khanza
+ * @author Rakha
  */
 public class ControllerLogin {
 
@@ -23,7 +23,7 @@ public class ControllerLogin {
         formLogin.getjCheckBoxShow().addActionListener(e -> perShow(formLogin));
         perShow(formLogin);
     }
-
+    
     @SuppressWarnings("deprecation")
     private void perLogin(FormLogin formLogin) {
         if (!formLogin.getjTextFieldId().getText().isEmpty()) {
@@ -44,7 +44,7 @@ public class ControllerLogin {
             JOptionPane.showMessageDialog(null, "Username tidak boleh kosong", "Warning", JOptionPane.WARNING_MESSAGE);
         }
     }
-
+    
     private void perMenu(FormLogin formLogin, Integer role) {
         formLogin.setVisible(false);
         FormMenu formMenu = new FormMenu();

@@ -11,7 +11,7 @@ import rakha.connection.Conn;
 
 /**
  *
- * @author Khanza
+ * @author Rakha
  */
 public class SellJdbcImplement implements SellJdbc {
 

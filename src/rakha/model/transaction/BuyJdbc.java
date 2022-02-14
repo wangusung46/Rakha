@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  *
- * @author Khanza
+ * @author Rakha
  */
 public interface BuyJdbc {
 

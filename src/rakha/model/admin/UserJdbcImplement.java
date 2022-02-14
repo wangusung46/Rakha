@@ -9,7 +9,7 @@ import rakha.connection.Conn;
 
 /**
  *
- * @author Khanza
+ * @author Rakha
  */
 public class UserJdbcImplement implements UserJdbc {
 
@@ -66,5 +66,28 @@ public class UserJdbcImplement implements UserJdbc {
             return null;
         }
 
+    }
+
+    @Override
+    public Boolean supervisor(String password) {
+        try {
+            sql = "SELECT * FROM user WHERE password = ? AND role = 2";
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, password);
+            System.out.println(preparedStatement.toString());
+            resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                resultSet.close();
+                preparedStatement.close();
+                return true;
+            } else {
+                resultSet.close();
+                preparedStatement.close();
+                return false;
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.WARNING_MESSAGE);
+            return null;
+        }
     }
 }

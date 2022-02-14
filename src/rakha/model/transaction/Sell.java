@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 /**
  *
- * @author Khanza
+ * @author Rakha
  */
 public class Sell {
 
